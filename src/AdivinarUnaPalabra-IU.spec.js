@@ -20,9 +20,13 @@ describe("Adivinar Palabra", () => {
         expect(resultado.innerHTML).toEqual(" ");
     });*/
 
-    it(" deberia ingresar el palabra a Adivinar", () => {
+    it(" deberia ingresar la palabra a Adivinar", () => {
         expect(jugar.IngresarPalabra("arbol")).toEqual("arbol");
-      });
+    });
     
+    it("deberia devolver la cantidad de letras de una palabra", () => {
+        expect(jugar.contarLetras("arbol")).toEqual(5);
+    });
+
     
 });
