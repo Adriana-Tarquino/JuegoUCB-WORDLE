@@ -19,5 +19,14 @@ class Juego
         }
         return resp;
     }
+    comparaLetrasCorrectas(palabra,palabra2)
+    {
+        var letraCorecta = '';
+        if(palabra.at(0) == palabra2.at(0))
+        {
+            letraCorecta = palabra.at(0);
+        }
+        return letraCorecta;
+    }
 }
 export default Juego; 
