@@ -22,11 +22,18 @@ class Juego
     comparaLetrasCorrectas(palabra,palabra2)
     {
         var letraCorecta = '';
+        let listaLetrasCorrectas = "";
         if(palabra.at(0) == palabra2.at(0))
         {
             letraCorecta = palabra.at(0);
+            listaLetrasCorrectas += letraCorecta;
         }
-        return letraCorecta;
+        if(palabra.at(1) == palabra2.at(1))
+        {
+            letraCorecta = palabra.at(1);
+            listaLetrasCorrectas += letraCorecta;
+        }
+        return listaLetrasCorrectas;
     }
 }
 export default Juego; 
