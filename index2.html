@@ -1,15 +1,14 @@
 <html>
   <body>
     <h1>WORDLE</h1>
-    <form id="Juego-form">
-      <label for="Codigo">Ingrese el codigo secreto:</label>
-      <input type="text" id="codigosecreto" />
-      <input type="submit" value="INICIAR" />
+    <form id="Adivinar-form">
+      <label for="palabra-adivinar">Palabra:</label>
+      <input id="palabra-adivinar" type="text"/>
+
+      <input type="submit" value="ADIVINAR" id="boton-adivinar" />
     </form>
     <div id="resultado-div"></div>
     <div id="contar"></div>
-
     <script type="module" src="./src/presenter.js"></script>
-    <script type="module" src="index.html"></script>
   </body>
 </html>
