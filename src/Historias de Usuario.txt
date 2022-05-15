@@ -19,8 +19,8 @@ Criterios de Confirmación:
 H. U. N° 3:
 Como: Jugador
 Quiero: poder visualizar la cantidad de letras que tiene la palabra.
-    Para: poder tener una pista y pensar mejor qué palabras tienen la misma cantidad de letras.
-    Criterios de Confirmación:
+Para: poder tener una pista y pensar mejor qué palabras tienen la misma cantidad de letras.
+Criterios de Confirmación:
     Se debe mostrar en la parte superior derecha el número de la cantidad de letras que tiene la palabra. 
 
 H. U. N° 4 :
