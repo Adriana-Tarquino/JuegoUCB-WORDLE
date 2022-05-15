@@ -1,0 +1,63 @@
+HISTORIAS DE USUARIO
+H. U. N° 1 :
+Como: Jugador 
+Quiero: leer las instrucciones
+Para:  saber cómo funciona el juego.
+Criterios de Confirmación:
+    El jugador podrá ver un detalle simple del juego para empezar a jugar.
+    Se mostrará un botón para poder empezar el juego.   
+
+
+H. U. N° 2: 
+Como: Jugador 
+Quiero: poder adivinar una palabra
+Para: saber si está bien o no mi respuesta.
+Criterios de Confirmación:
+    Una vez presionado el botón iniciar, el jugador podrá ver una cuadro de texto donde podrá ingresar la palabra que cree que es la correcta.
+
+
+H. U. N° 3:
+Como: Jugador
+Quiero: poder visualizar la cantidad de letras que tiene la palabra.
+    Para: poder tener una pista y pensar mejor qué palabras tienen la misma cantidad de letras.
+    Criterios de Confirmación:
+    Se debe mostrar en la parte superior derecha el número de la cantidad de letras que tiene la palabra. 
+
+H. U. N° 4 :
+Como: Jugador
+Quiero: ver un mensaje que me indique qué letras están en la posición correcta.
+Para:  buscar el resto de letras que faltan en la palabra. 
+Criterios de Confirmación:
+    Se deberá introducir una palabra en el cuadro de texto: Ejemplo “autos”.
+    Si las letras coinciden en la posición correcta, se debe mostrar en la parte inferior izquierda el mensaje que diga “Las letras que están en la palabra están en la posición correcta: ”:
+    Ejemplo la palabra ingresada es “autos” y la palabra a adivinar es “arbol”, nuestro juego debe retornar “Las letras “a y o” que están en la palabra están en la posición correcta: ” .
+
+
+
+H. U. N° 5:
+Como: Jugador 
+Quiero: ver un mensaje que me indique qué letras están en la posición incorrecta
+Para: buscar otras letras en esa posición.
+Criterios de Confirmación:
+    Se deberá introducir una palabra en el cuadro de texto:Ejemplo “autos”.
+    Si las letras no coinciden en la posición correcta, se debe mostrar en la parte inferior izquierda el mensaje que diga “Las letras están en la palabra pero en posición incorrecta”.
+    Ejemplo la palabra ingresada es “autos” y la palabra a adivinar es “arbol”, nuestro juego debe retornar  “Las letras “ ” están en la palabra pero en posición incorrecta”.
+
+
+H. U. N° 6:
+Como: Jugador 
+Quiero: ver un mensaje que me indique qué letras no están en la palabra.
+Para: buscar otras letras.
+Criterios de Confirmación:
+    Se deberá introducir una palabra en el cuadro de texto: Ejemplo “autos”.
+    Al introducir una palabra en el cuadro de texto, si las letras de la palabra que se ha introducido no coinciden con la palabra a adivinar, se va a mostrar en la parte inferior izquierda el mensaje que diga “Estas letras  no están en la palabra:”:
+    Ejemplo la palabra ingresada es “autos” y la palabra a adivinar es “arbol”, nuestro juego debe retornar“Estas letras “u t s”  no están en la palabra:”
+
+
+H. U. N° 7:
+Como: Jugador 
+Quiero: poder saber si gané o perdí el juego
+Para: volver a jugar o salir del juego.
+Criterios de Confirmación:
+ Se mostrará un mensaje que diga que ganó el juego si la palabra es correcta.
+ Se mostrará un mensaje que diga que perdió el juego si la palabra es incorrecta.
