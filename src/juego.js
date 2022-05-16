@@ -45,9 +45,11 @@ class Juego
         let listaLetPosInCorrectas = "";	
         for(var i = 0; i < palabra2.length; i++){
             for(var j = 0; j < palabra.length; j++){
-                if(palabra2.at(j) === palabra.at(i)){
-                    letPosIncorrecta = palabra2.at(j);
-                    listaLetPosInCorrectas += letPosIncorrecta;
+                if(i != j){
+                    if(palabra2.at(j) === palabra.at(i)){
+                        letPosIncorrecta = palabra2.at(j);
+                        listaLetPosInCorrectas += letPosIncorrecta;
+                    }
                 }
             }
         }

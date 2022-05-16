@@ -30,4 +30,7 @@ describe("---Letras que estan en la posicion incorrecta----",() =>{
     it("Comprobamos si las letra esta en una posicion incorrecta de la palabra", () => {
         expect(jugar.comparaLetrasInCorrectas("nivel", "lapiz")).toEqual("il");
       });
+    it("Comprobamos si las letra esta en una posicion incorrecta de la palabra(no tomar en cuenta letras correctas)", () => {
+        expect(jugar.comparaLetrasInCorrectas("nivel", "metal")).toEqual("e");
+      });
 });
