@@ -40,5 +40,13 @@ class Juego
         }
         return listaLetrasCorrectas;
     }
+    comparaLetrasInCorrectas(palabra,palabra2){
+        var letPosIncorrecta = '';
+
+       if(palabra.at(2) === palabra2.at(0)){
+        letPosIncorrecta = palabra2.at(0);
+       }	
+        return letPosIncorrecta;
+    }
 }
 export default Juego; 

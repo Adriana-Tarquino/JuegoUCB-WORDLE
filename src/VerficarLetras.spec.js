@@ -18,3 +18,10 @@ describe("---Letras que estan en la posicion correcta----",() =>{
         expect(jugar.comparaLetrasCorrectas("autos", "cazar")).toEqual("");
     });
 });
+
+describe("---Letras que estan en la posicion incorrecta----",() =>{
+    const jugar = new Juego();
+    it("Comprobamos si la primera  letra de la palabra es correcta pero en una posicion incorrecta", () => {
+      expect(jugar.comparaLetrasInCorrectas("sol", "liz")).toEqual('l');
+    });
+});
