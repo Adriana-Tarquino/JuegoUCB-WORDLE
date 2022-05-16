@@ -1,8 +1,17 @@
 class Juego 
 {
+    constructor (palabra){
+        this.palabra = palabra;
+        }
     IngresarPalabra(palabra)
     {
         return palabra;
+    }
+    getPalabra(){
+        return palabra;
+    }
+    setPalabra(palabra){
+        this.palabra = palabra;
     }
 
     contarLetras(palabra)
