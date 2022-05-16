@@ -23,15 +23,11 @@ class Juego
     {
         var letraCorecta = '';
         let listaLetrasCorrectas = "";
-        if(palabra.at(0) == palabra2.at(0))
-        {
-            letraCorecta = palabra.at(0);
-            listaLetrasCorrectas += letraCorecta;
-        }
-        if(palabra.at(1) == palabra2.at(1))
-        {
-            letraCorecta = palabra.at(1);
-            listaLetrasCorrectas += letraCorecta;
+        for(var i = 0; i < palabra2.length; i++){
+            if(palabra.at(i) == palabra2.at(i)){
+                letraCorecta = palabra2.at(i);
+                listaLetrasCorrectas += letraCorecta
+            }
         }
         return listaLetrasCorrectas;
     }
