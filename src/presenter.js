@@ -6,7 +6,7 @@ const div = document.querySelector("#resultado-div");
 const jugar = new Juego();
 
 const div2 = document.querySelector("#letras-div");
-const div3 = document.querySelector("#letras-div");
+const div3 = document.querySelector("#letras-incorrectas");
 
 
 form.addEventListener("submit", (event) => {
