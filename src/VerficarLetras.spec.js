@@ -22,10 +22,12 @@ describe("---Letras que estan en la posicion correcta----",() =>{
 describe("---Letras que estan en la posicion incorrecta----",() =>{
     const jugar = new Juego();
     it("Comprobamos si la primera  letra de la palabra es correcta pero en una posicion incorrecta", () => {
-      expect(jugar.comparaLetrasInCorrectas("sol", "liz")).toEqual('l');
+      expect(jugar.comparaLetrasInCorrectas("sol", "liz")).toEqual("l");
     });
     it("Comprobamos si la primera  letra de la palabra es correcta pero en una posicion incorrecta", () => {
-        expect(jugar.comparaLetrasInCorrectas("pola", "lupa")).toEqual('l');
+        expect(jugar.comparaLetrasInCorrectas("piel", "lupa")).toEqual("pl");
       });
-    
+    it("Comprobamos si las letra esta en una posicion incorrecta de la palabra", () => {
+        expect(jugar.comparaLetrasInCorrectas("nivel", "lapiz")).toEqual("il");
+      });
 });
