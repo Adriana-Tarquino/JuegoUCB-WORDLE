@@ -24,4 +24,8 @@ describe("---Letras que estan en la posicion incorrecta----",() =>{
     it("Comprobamos si la primera  letra de la palabra es correcta pero en una posicion incorrecta", () => {
       expect(jugar.comparaLetrasInCorrectas("sol", "liz")).toEqual('l');
     });
+    it("Comprobamos si la primera  letra de la palabra es correcta pero en una posicion incorrecta", () => {
+        expect(jugar.comparaLetrasInCorrectas("pola", "lupa")).toEqual('l');
+      });
+    
 });

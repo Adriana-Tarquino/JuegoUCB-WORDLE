@@ -42,10 +42,11 @@ class Juego
     }
     comparaLetrasInCorrectas(palabra,palabra2){
         var letPosIncorrecta = '';
-
-       if(palabra.at(2) === palabra2.at(0)){
-        letPosIncorrecta = palabra2.at(0);
-       }	
+        for(var i = 0; i < palabra2.length; i++){
+            if(palabra2.at(0) === palabra.at(i)){
+                letPosIncorrecta = palabra2.at(0);
+            }
+        }
         return letPosIncorrecta;
     }
 }
