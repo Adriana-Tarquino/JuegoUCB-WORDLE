@@ -42,12 +42,18 @@ class Juego
     }
     comparaLetrasInCorrectas(palabra,palabra2){
         var letPosIncorrecta = '';
+        let listaLetPosInCorrectas = "";	
         for(var i = 0; i < palabra2.length; i++){
-            if(palabra2.at(0) === palabra.at(i)){
-                letPosIncorrecta = palabra2.at(0);
+            for(var j = 0; j < palabra.length; j++){
+                if(i != j){
+                    if(palabra2.at(j) === palabra.at(i)){
+                        letPosIncorrecta = palabra2.at(j);
+                        listaLetPosInCorrectas += letPosIncorrecta;
+                    }
+                }
             }
         }
-        return letPosIncorrecta;
+        return listaLetPosInCorrectas ;
     }
 }
 export default Juego; 
