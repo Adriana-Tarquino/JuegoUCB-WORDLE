@@ -44,19 +44,30 @@ class Juego
         var letra = '';
         let listaLetPosIncorrectas = "";	
         for(var i = 0; i < palabra.length; i++){
-                letra = palabra.at(i);
-                for (var j = 0; j < palabra2.length; j++){
-                    if( i!=j){
-                        if(letra == palabra2.at(j)){
-                            listaLetPosIncorrectas += letra;
-                        }
+            letra = palabra.at(i);
+            for (var j = 0; j < palabra2.length; j++){
+                if( i!=j){
+                    if(letra == palabra2.at(j)){
+                        listaLetPosIncorrectas += letra;
                     }
                 }
+            }
         }
-        return listaLetPosIncorrectas ;
+        return listaLetPosIncorrectas;
+    }
+    mostrarLetrasNoExisten(palabra, palabra2){
+        var letra = '';
+        let listaLetNoExisten = "";
+        for (var i = 0; i < palabra.length; i++){
+            letra = palabra2.at(i);
+            if(letra != palabra.at(i)){
+                listaLetNoExisten += letra;
+            }
+        }
+        return listaLetNoExisten;
     }
 }
 
 // var game = new Juego();
-// console.log(game.comparaLetrasInCorrectas("arbol","autos"));
+// console.log(game.mostrarLetrasNoExisten("arbol","autos"));
 export default Juego; 

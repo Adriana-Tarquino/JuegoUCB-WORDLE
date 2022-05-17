@@ -34,3 +34,13 @@ describe("---Letras que estan en la posicion incorrecta----",() =>{
         expect(jugar.comparaLetrasInCorrectas("nivel", "metal")).toEqual("e");
       });
 });
+
+describe("---Mostrar letras que no estan en la palabra a adivinar---", () => {
+  const jugar = new Juego();
+  it("letras que no estan en la palabra a adivinar", () => {
+    expect(jugar.mostrarLetrasNoExisten("arbol", "autos")).toEqual("uts");
+  })
+  it("Una letra que esta en la palabra a adivinar pero en otra direccion", () => {
+    expect(jugar.mostrarLetrasNoExisten("arbol", "autor")).toEqual("ut");
+  })
+});
