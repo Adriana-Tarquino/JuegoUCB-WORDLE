@@ -20,15 +20,15 @@ describe("Adivinar Palabra", () => {
         expect(resultado.innerHTML).toEqual(" ");
     });*/
 
-    it("deberia ingresar la palabra ", () => {
+    it("---Ingresar la palabra--- ", () => {
         expect(jugar.IngresarPalabra("arbol")).toEqual("arbol");
     });
     
-    it("deberia comparar la palabra ingresada con las palabra a adivinar", () => {
+    it("---Comparar la palabra ingresada con las palabra a adivinar---", () => {
         expect(jugar.compararPalabra("arbol","arbol")).toEqual(true);
     });    
 
-    it("deberia comparar la palabra ingresada con las palabra a adivinar y retornar false", () => {
+    it("---Comparar la palabra ingresada con las palabra a adivinar y retornar false---", () => {
         expect(jugar.compararPalabra("arbol","ramas")).toEqual(false);
     });    
 });
