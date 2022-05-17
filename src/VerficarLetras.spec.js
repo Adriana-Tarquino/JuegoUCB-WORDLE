@@ -43,4 +43,7 @@ describe("---Mostrar letras que no estan en la palabra a adivinar---", () => {
   it("Una letra que esta en la palabra a adivinar pero en otra direccion", () => {
     expect(jugar.mostrarLetrasNoExisten("arbol", "autor")).toEqual("ut");
   })
+  it("Una palabra sin letras que coincidan, no con letras que esten en la palabra", () => {
+    expect(jugar.mostrarLetrasNoExisten("arbol", "svenw")).toEqual("svenw");
+  })
 });
