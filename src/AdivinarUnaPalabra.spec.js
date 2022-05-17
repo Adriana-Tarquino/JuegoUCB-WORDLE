@@ -27,10 +27,4 @@ describe("Adivinar Palabra", () => {
     it("deberia comparar la palabra ingresada con las palabra a adivinar", () => {
         expect(jugar.compararPalabra("arbol","arbol")).toEqual(true);
     });    
-    
-    // Test de letras incorrectas
-    it("Al introducir una palabra, comparar letras y mostrar las incorrectas", () => {
-        expect(jugar.comparaLetrasIncorrectas("arbol","autos")).toEqual("u,t,s");
-    });
-    
 });

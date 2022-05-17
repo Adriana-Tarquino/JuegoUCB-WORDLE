@@ -41,19 +41,25 @@ class Juego
         return listaLetrasCorrectas;
     }
     comparaLetrasInCorrectas(palabra,palabra2){
-        var letPosIncorrecta = '';
-        let listaLetPosInCorrectas = "";	
+        var letra = '';
+        let listaLetPosIncorrectas = "";	
         for(var i = 0; i < palabra2.length; i++){
-            for(var j = 0; j < palabra.length; j++){
-                if(i != j){
-                    if(palabra2.at(j) === palabra.at(i)){
-                        letPosIncorrecta = palabra2.at(j);
-                        listaLetPosInCorrectas += letPosIncorrecta;
+            // if(palabra.at(i) != palabra2.at(i)){
+                letra = palabra2.at(i);
+                for (var j = 0; j < palabra.length; j++){
+                    if( i!=j){
+                        if(letra == palabra.at(j)){
+                            listaLetPosIncorrectas += letra;
+                        }
                     }
                 }
-            }
+
+            // }
         }
-        return listaLetPosInCorrectas ;
+        return listaLetPosIncorrectas ;
     }
 }
+
+// var game = new Juego();
+// console.log(game.comparaLetrasInCorrectas("arbol","autos"));
 export default Juego; 
