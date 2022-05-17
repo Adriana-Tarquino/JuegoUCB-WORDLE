@@ -2,16 +2,21 @@ class Juego
 {
     constructor (palabra){
         this.palabra = palabra;
-        }
+    }
+
     IngresarPalabra(palabra)
     {
         return palabra;
     }
-    getPalabra(){
+
+    getPalabra()
+    {
         return palabra;
     }
-    setPalabra(palabra){
-        this.palabra = palabra;
+
+    setPalabra(palabra)
+    {
+       return this.palabra = palabra;
     }
 
     contarLetras(palabra)
@@ -19,15 +24,18 @@ class Juego
         var cantLetras = palabra.length;
         return cantLetras;
     }
-    compararPalabra(palabra1,palabra2,pos1,pos2)
+
+    compararPalabra(palabra,palabra2)
     {
+        let pos1, pos2;
         var resp = false;
-        if(palabra1.charAt(pos1) == palabra2.charAt(pos2))
+        if(palabra.charAt(pos1) == palabra2.charAt(pos2))
         {
             resp =true;
         }
         return resp;
     }
+    
     comparaLetrasCorrectas(palabra,palabra2)
     {
         var letraCorecta = '';
@@ -40,7 +48,9 @@ class Juego
         }
         return listaLetrasCorrectas;
     }
-    comparaLetrasInCorrectas(palabra,palabra2){
+
+    comparaLetrasInCorrectas(palabra,palabra2)
+    {
         var letra = '';
         let listaLetPosIncorrectas = "";	
         for(var i = 0; i < palabra.length; i++){
@@ -55,7 +65,9 @@ class Juego
         }
         return listaLetPosIncorrectas;
     }
-    mostrarLetrasNoExisten(palabra, palabra2){
+
+    mostrarLetrasNoExisten(palabra, palabra2)
+    {
         var letra = '';
         let listaLetNoExisten = "";
         let letPosInc = this.comparaLetrasInCorrectas(palabra, palabra2);

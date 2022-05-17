@@ -12,6 +12,17 @@ const jugar = new Juego();
    expect(" ").toEqual(" ");
   });
 
+  it("deberia redireccionar a la siguiente pagina de juego WORDLE al presionar el boton INICIAR", () => {
+    const titulo = document.querySelector("#button-iniciar");
+    expect(" ").toEqual(" ");
+  });
+
+  it("deberia mostrar la pagina de juego WORDLE", () => {
+    const titulo = document.querySelector("#index2");
+    expect(" ").toEqual(" ");
+  });
+ 
+
   /*it("deberia mostrar como jugar el juego", () => {
    const tutorial = document.querySelector("#tutorial");
    expect(tutorial.innerHTML).toEqual("COMO JUGAR");

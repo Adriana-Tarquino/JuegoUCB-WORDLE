@@ -13,6 +13,7 @@ describe("Adivinar Palabra", () => {
 
     });*/
 
+
     it("deberia devolver la cantidad de letras de una palabra", () => {
         expect(jugar.contarLetras("arbol")).toEqual(5);
     });
