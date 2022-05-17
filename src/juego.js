@@ -58,10 +58,20 @@ class Juego
     mostrarLetrasNoExisten(palabra, palabra2){
         var letra = '';
         let listaLetNoExisten = "";
-        for (var i = 0; i < palabra.length; i++){
+        let letPosInc = this.comparaLetrasInCorrectas(palabra, palabra2);
+        for (var i = 0; i < palabra2.length; i++){
             letra = palabra2.at(i);
             if(letra != palabra.at(i)){
-                listaLetNoExisten += letra;
+                if(letPosInc != ""){
+                    for (var j = 0; j <letPosInc.length; j++) {
+                        if(letra != letPosInc.at(j)){
+                            listaLetNoExisten += letra;
+                        }
+                    }
+                }else{
+                    listaLetNoExisten += letra;
+                }
+                
             }
         }
         return listaLetNoExisten;
