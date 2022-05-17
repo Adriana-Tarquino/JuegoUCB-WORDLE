@@ -43,18 +43,15 @@ class Juego
     comparaLetrasInCorrectas(palabra,palabra2){
         var letra = '';
         let listaLetPosIncorrectas = "";	
-        for(var i = 0; i < palabra2.length; i++){
-            // if(palabra.at(i) != palabra2.at(i)){
-                letra = palabra2.at(i);
-                for (var j = 0; j < palabra.length; j++){
+        for(var i = 0; i < palabra.length; i++){
+                letra = palabra.at(i);
+                for (var j = 0; j < palabra2.length; j++){
                     if( i!=j){
-                        if(letra == palabra.at(j)){
+                        if(letra == palabra2.at(j)){
                             listaLetPosIncorrectas += letra;
                         }
                     }
                 }
-
-            // }
         }
         return listaLetPosIncorrectas ;
     }
