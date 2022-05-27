@@ -38,12 +38,12 @@ describe("---Letras que estan en la posicion incorrecta----",() =>{
 describe("---Mostrar letras que no estan en la palabra a adivinar---", () => {
   const jugar = new Juego();
   it("letras que no estan en la palabra a adivinar", () => {
-    expect(jugar.mostrarLetrasNoExisten("arbol", "autos")).toEqual("uts");
+    expect(jugar.mostrarLetrasNoExisten("arbol", "autos")).toEqual(["u", "t", "s"]);
   })
   it("Una letra que esta en la palabra a adivinar pero en otra direccion", () => {
-    expect(jugar.mostrarLetrasNoExisten("arbol", "autor")).toEqual("ut");
+    expect(jugar.mostrarLetrasNoExisten("arbol", "autor")).toEqual(["u", "t"]);
   })
   it("Una palabra sin letras que coincidan, no con letras que esten en la palabra", () => {
-    expect(jugar.mostrarLetrasNoExisten("arbol", "svenw")).toEqual("svenw");
+    expect(jugar.mostrarLetrasNoExisten("arbol", "casas")).toEqual(["c", "s"]);
   })
 });
