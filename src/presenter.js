@@ -12,21 +12,8 @@ const div4 = document.querySelector("#letras-no-existen-div")
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const palabraAdivinar = "arbol";
-    if(codigo_imput.value == palabraAdivinar){
-        confirm("Ganaste");
-        div.innerHTML = "<p>" + "La palabra es  " +  palabraAdivinar + "</p>";
-    
-        ///Mostrar Letras correctas.
-        div2.innerHTML = "<p>" + "Letras que estan en la palabra en la posición correcta: "+ jugar.comparaLetrasCorrectas(palabraAdivinar,codigo_imput.value) + "</p>";
-        div3.innerHTML = "<p>" + "Letras que estan en la palabra pero en la posición incorrecta: " + jugar.comparaLetrasInCorrectas(palabraAdivinar,codigo_imput.value) + "</p>";
-        div4.innerHTML = "<p>" + "Letras que NO estan en la palabra a adivinar: " + jugar.mostrarLetrasNoExisten(palabraAdivinar,codigo_imput.value) + "</p>";
-    }else{
-        confirm("Perdiste");
-        div.innerHTML = "<p>" + "La palabra es  " +  palabraAdivinar + "</p>";
-    
-        ///Mostrar Letras correctas.
-        div2.innerHTML = "<p>" + "Letras que estan en la palabra en la posición correcta: "+ jugar.comparaLetrasCorrectas(palabraAdivinar,codigo_imput.value) + "</p>";
-        div3.innerHTML = "<p>" + "Letras que estan en la palabra pero en la posición incorrecta: " + jugar.comparaLetrasInCorrectas(palabraAdivinar,codigo_imput.value) + "</p>";
-        div4.innerHTML = "<p>" + "Letras que NO estan en la palabra a adivinar: " + jugar.mostrarLetrasNoExisten(palabraAdivinar,codigo_imput.value) + "</p>";
-    }
+    div.innerHTML ="La palabra es " + palabraAdivinar ;
+    div2.innerHTML ="Letras que estan en la palabra en la posición correcta: "+ jugar.comparaLetrasCorrectas(palabraAdivinar,codigo_imput.value) ;
+    div3.innerHTML ="Letras que estan en la palabra pero en la posición incorrecta: " + jugar.comparaLetrasInCorrectas(palabraAdivinar,codigo_imput.value) ;
+    div4.innerHTML ="Letras que NO estan en la palabra a adivinar: " + jugar.mostrarLetrasNoExisten(palabraAdivinar,codigo_imput.value) ;
 }); 
