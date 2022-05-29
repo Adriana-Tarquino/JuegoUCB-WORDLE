@@ -69,3 +69,6 @@ const eliminar = async (actualPalabra) => {
 // crear();
 // actualizar("cantar", "jugar", "verbos");
 // eliminar("caminar");
+
+//una palabra aletoria de una categoria(nombreCategoria) => return una palabra de la categoria 
+//una palabra tiene que estar en la lista de palabras (palabra) => true of false 
