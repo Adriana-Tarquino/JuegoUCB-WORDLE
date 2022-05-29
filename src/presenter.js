@@ -1,4 +1,7 @@
 import Juego from "./juego.js";
+// Conexion a la base de datos
+require("./dataBase")
+// fin de la conexion de la base de datos
 
 const codigo_imput = document.querySelector("#palabra-adivinar");
 const form = document.querySelector("#Adivinar-form");
