@@ -1,5 +1,9 @@
 class Juego 
 {
+    constructor(intentoTotal){
+        this.intentoTotal = 2;
+    }
+
     IngresarPalabra(palabra)
     {
         return palabra;
@@ -12,22 +16,44 @@ class Juego
     }
     compararPalabra(palabra,palabra2)
     {
-        let pos1, pos2;
         var resp = false;
-        if(palabra.at(pos1) == palabra2.at(pos2))
+        if(palabra === palabra2)
         {
             resp =true;
         }
         return resp;
     }
-
+    ValidarJugabilidad(palabra,palabra2)
+    {
+        let mensaje = "Perdiste!";
+        if(palabra === palabra2)
+        {
+           mensaje = "Ganaste!";
+        }
+       else{
+           if(this.intentos === 0){
+               mensaje = "Perdiste!";
+           }
+           else{
+               this.ValidarIntentos(mensaje);
+           }
+       }
+        return mensaje;
+    }
+    ValidarIntentos(mensaje)
+    {
+        if(mensaje === "Perdiste!"){
+            this.intentoTotal = this.intentoTotal - 1;
+        }
+        return this.intentoTotal;
+    }
     comparaLetrasCorrectas(palabra,palabra2)
     {
         var letraCorecta = '';
         let listaLetrasCorrectas = "";
         for(var i = 0; i < palabra2.length; i++){
             letraCorecta = palabra.at(i);
-            listaLetrasCorrectas = this.compararPosiciones(listaLetrasCorrectas, letraCorecta, palabra2,i);
+            listaLetrasCorrectas =this.compararPosiciones(listaLetrasCorrectas, letraCorecta, palabra2,i);
         }
         return listaLetrasCorrectas;
     }

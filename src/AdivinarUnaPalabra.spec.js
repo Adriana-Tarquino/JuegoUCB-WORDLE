@@ -7,20 +7,7 @@ describe("Adivinar Palabra", () => {
     beforeAll(() =>{
     document.body.innerHTML = fs.readFileSync("index.html", "utf8");
     });
-    /*it ("deberia mostrarme un bloque para ingresar la palabra a adivinar palabra", () =>{
-        const palabraAdivinar = document.querySelector("#palabra-adivinar");
-        palabraAdivinar.value ="arbol";
-
-        const botonAdivinar = document.querySelector("#boton-adivinar");
-        botonAdivinar.click();
-        
-        const resultado = document.querySelector("#resultado-div");
-        botonAdivinar.click();
-        
-        expect(resultado.innerHTML).toEqual(" ");
-    });*/
-
-    it("---Ingresar la palabra--- ", () => {
+     it("---Ingresar la palabra--- ", () => {
         expect(jugar.IngresarPalabra("arbol")).toEqual("arbol");
     });
     

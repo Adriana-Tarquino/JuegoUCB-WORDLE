@@ -22,11 +22,4 @@ const jugar = new Juego();
     expect(" ").toEqual(" ");
   });
  
-
-  /*it("deberia mostrar como jugar el juego", () => {
-   const tutorial = document.querySelector("#tutorial");
-   expect(tutorial.innerHTML).toEqual("COMO JUGAR");
-  });*/
- 
-
 });

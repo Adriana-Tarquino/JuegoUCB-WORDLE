@@ -47,3 +47,19 @@ describe("---Mostrar letras que no estan en la palabra a adivinar---", () => {
     expect(jugar.mostrarLetrasNoExisten("arbol", "casas")).toEqual(["c", "s"]);
   })
 });
+
+describe("---JUGABILIDAD---", () => {
+  const jugar = new Juego();
+  it("Mostrar el mensaje de perdiste el juego", () => {
+    expect(jugar.ValidarJugabilidad("arbol","casas")).toEqual("Perdiste!");
+  })
+  it("Mostrar el mensaje de perdiste el juego", () => {
+    expect(jugar.ValidarJugabilidad("arbol","arbol")).toEqual("Ganaste!");
+  })
+  it("Poder jugar con dos intentos ", () => {
+    expect(jugar.ValidarIntentos("Perdiste!")).toEqual(0);
+  })
+  it("Comprueba la jugabilidad del juego", () => {
+    expect(jugar.ValidarJugabilidad("arbol","casas")).toEqual("Perdiste!");
+  })
+});
