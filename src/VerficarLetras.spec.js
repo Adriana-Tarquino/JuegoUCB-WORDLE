@@ -17,6 +17,9 @@ describe("---Letras que estan en la posicion correcta----",() =>{
     it("Comprobamos si las toda la palabra coinciden y devuelve solo las correctas y si no son correectas devuelve vacio", () => {
         expect(jugar.comparaLetrasCorrectas("autos", "cazar")).toEqual("");
     });
+    it("deberia elegir cualquier palabra", () => {
+      expect(jugar.palabrasAleatoria()).toEqual();
+  });
 });
 
 describe("---Letras que estan en la posicion incorrecta----",() =>{

@@ -1,3 +1,4 @@
+import listapalabras from "./listaPalabras.js" 
 class Juego 
 {
     constructor(intentoTotal){
@@ -25,6 +26,13 @@ class Juego
         }
         return resp;
     }
+    palabrasAleatoria(){     
+        var rand = Math.random()*listapalabras.length | 0;
+        const respuesta = listapalabras [rand]
+        //this.palabra = respuesta;
+        return respuesta;
+    }
+
     ValidarJugabilidad(palabra,palabra2)
     {
         let mensaje = "Perdiste!";
