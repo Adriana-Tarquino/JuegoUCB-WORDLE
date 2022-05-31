@@ -32,5 +32,9 @@ form.addEventListener("submit", (event) => {
    
     if(jugar.intentoTotal == 0){
         alert(jugar.TerminarJuego(jugar.ValidarJugabilidad(palabraAdivinar,palabra_imput.value)));
+       
+    }
+    else {
+        alert(jugar.ValidarJugabilidad(palabraAdivinar, palabra_imput.value))
     }
 });
