@@ -61,3 +61,80 @@ Para: volver a jugar o salir del juego.
 Criterios de Confirmación:
  Se mostrará un mensaje que diga que ganó el juego si la palabra es correcta.
  Se mostrará un mensaje que diga que perdió el juego si la palabra es incorrecta.
+
+
+SEGUNDA ITERACIÓN
+
+H. U. N° 8:
+Como: Jugador 
+Quiero:  Poder tener más intentos.
+Para:  adivinar la palabra
+Criterios de Confirmación:
+En la parte superior izquierda se podrá visualizar el número de intentos que tiene.
+Podrá ver que se decrementa cada vez que intenta con una palabra nueva y no es la correcta.
+
+H. U. N° 9:
+Como: Jugador 
+Quiero:  poder validar si ingreso una palabra que exista.
+Para:  pensar en mi siguiente intento la palabra a adivinar.
+Criterios de Confirmación:
+Cuando ingreso una palabra no valida esta  no se visualizará y aparecerá un mensaje de error que intente de nuevo. “Palabra no válida.”
+
+H. U. N° 10:
+Como: Jugador 
+Quiero:  Poder ver las pistas de los anteriores intentos.
+Para:  poder pensar mejor mis siguientes intentos y adivinar.
+Criterios de Confirmación:
+Se mostrará en la parte inferior todas las pistas de los anteriores intentos.
+
+H. U. N° 11:          
+Como: Administrador.
+Quiero:  hacer un login en la página.
+Para:  poder hacer modificaciones en la página. 
+Criterios de Confirmación:
+En la página principal  presionar el botón “Iniciar sesión” el administrador tendrá que iniciar sesión como admin y la contraseña es 1234.
+
+H. U. N° 12:
+Como: Administrador.
+Quiero:  poder crear categorías de palabras.
+Para:  poder añadir más categorías al juego. 
+Criterios de Confirmación:
+Poder añadir categorías y presionar un botón “Añadir categoría”.
+
+
+
+H. U. N° 13:
+Como: Jugador 
+Quiero:  poder seleccionar categorías.
+Para:  tener en mente el conjunto de palabras que debo pensar para poder adivinar.
+Criterios de Confirmación:
+Antes de jugar debemos seleccionar una categoría a la que queremos jugar.
+H. U. N° 14:
+Como: Jugador 
+Quiero:  volver a jugar con una palabra nueva.
+Para:  volver a jugar.
+Criterios de Confirmación:
+Se debe mostrar un botón en la parte superior izquierda de la pantalla que diga “Volver a jugar”.
+
+H. U. N° 15:
+Como: Jugador 
+Quiero:  poder colocar mi nombre.
+Para:  poder ver en la tabla de posiciones los mejores jugadores.
+Criterios de Confirmación:
+En la parte derecha se mostrará una tabla de posiciones de los jugadores que ya fueron registrados.
+Se debe ordenar por el número menor de intentos de cada jugador.
+
+
+H. U. N° 16:
+Como: Jugador 
+Quiero:  poder ver elegir el grado de dificultad del juego.
+Para:  que el juego sea más desafiante.
+Criterios de Confirmación:
+En la pantalla de inicio el jugador podrá elegir la dificultad del juego entre Fácil, intermedio y difícil.
+Dónde fácil: tendrás 6 intentos.
+Donde Intermedio: tendrás 4 intentos.
+Donde Dificil: tendras 2 intentos.
+
+
+
+
