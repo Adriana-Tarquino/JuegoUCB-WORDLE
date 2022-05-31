@@ -65,4 +65,7 @@ describe("---JUGABILIDAD---", () => {
   it("Se dede mostrar un mensaje que Perdiste en el juego ", () => {
     expect(jugar.TerminarJuego("Perdiste!")).toEqual("Perdiste!");
   })
+  it("Se deberia mostrar un a lista de palabaras que contenga las pistas anteriores", () => {
+    expect(jugar.guardarPistas("arbol","casas")).toEqual("/aa/c,s");
+  })
 });

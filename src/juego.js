@@ -2,11 +2,10 @@ class Juego
 {
     constructor(intentoTotal){
         this.intentoTotal = 2;
+        //this.palabra = palabra;
     }
 
-    listaPalabras(){
-        let listaPalabras= ["arbol", "avion", "autos", "casas", "motos", "arcos","buses", "bebes","caldo"];
-    }
+
     IngresarPalabra(palabra)
     {
         return palabra;
@@ -54,6 +53,13 @@ class Juego
         }else{
             return mensaje;
         }
+    }
+    guardarPistas(palabra,palabra2){
+        let correctas = this.comparaLetrasCorrectas(palabra,palabra2);
+        let incorrectas = this.comparaLetrasInCorrectas(palabra,palabra2);
+        let noEstanPalabra = this.mostrarLetrasNoExisten(palabra,palabra2);
+        let totalpISTAS = correctas + "/" + incorrectas + "/" + noEstanPalabra;
+        return totalpISTAS; 
     }
     comparaLetrasCorrectas(palabra,palabra2)
     {

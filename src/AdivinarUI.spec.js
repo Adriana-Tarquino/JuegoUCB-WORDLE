@@ -16,7 +16,6 @@ describe("Adivinar Palabra", () => {
     
         const botonAdivinar = document.querySelector("#boton-adivinar");
         botonAdivinar.click();
-    
         const resultado = document.querySelector("#resultado-div");
         //expect(resultado.innerHTML).toEqual("La palabra es arbol");
     });    
