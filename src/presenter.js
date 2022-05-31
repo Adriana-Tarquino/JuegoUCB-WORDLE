@@ -13,8 +13,6 @@ const div3 = document.querySelector("#letras-incorrectas-div");
 const div4 = document.querySelector("#letras-no-existen-div");
 const divIntentos = document.querySelector("#intentos-div");
 const divMensaje = document.querySelector("#mensaje-div");
-const divpistas = document.querySelector("#pistas-div");
-const form2 = document.querySelector("#pistas-form");
 const pistas = "";
 divIntentos.innerHTML = "<h1>" + jugar.intentoTotal +"</h1>";
 form.addEventListener("submit", (event) => {
@@ -28,19 +26,11 @@ form.addEventListener("submit", (event) => {
     const correctas =jugar.comparaLetrasCorrectas(palabraAdivinar,palabra2) ;
     const incorrectas = jugar.comparaLetrasInCorrectas(palabraAdivinar,palabra2) ;
     const noEstanPalabra = jugar.mostrarLetrasNoExisten(palabraAdivinar,palabra2) ;
-    div2.innerHTML = "Letras que estan en la palabra en la posición correcta: "+ correctas;
-    div3.innerHTML ="Letras que estan en la palabra pero en la posición incorrecta: " + incorrectas;
-    div4.innerHTML ="Letras que NO estan en la palabra a adivinar: " + noEstanPalabra;
+    div2.innerHTML = correctas + "," + div2.innerHTML;
+    div3.innerHTML = incorrectas + "," + div3.innerHTML;
+    div4.innerHTML =noEstanPalabra + "," + div4.innerHTML;
    
     if(jugar.intentoTotal == 0){
         alert(jugar.TerminarJuego(jugar.ValidarJugabilidad(palabraAdivinar,palabra_imput.value)));
     }
-    //pistas = jugar.guardarPistas(correctas, incorrectas, noEstanPalabra);
-    //divpistas.innerHTML = pista;
-}); 
-
-/*form2.addEventListener("submit", (event) => {
-    event.preventDefault();
-    //const pistas = jugar.guardarPistas(palabraAdivinar,palabra2);
-    //divpistas.innerHTML = pistas;
-});*/
+});
