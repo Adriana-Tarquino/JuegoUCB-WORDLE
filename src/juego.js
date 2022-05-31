@@ -1,3 +1,14 @@
+const baseDatos = [
+    {
+        categoria: "frutas",
+        palabras: ["platano", "mora", "limon", "manzana", "frutilla"],
+    },
+    {
+        categoria: "verbos",
+        palabras: ["caminar", "comer", "bailar", "correr", "jugar"],
+    },
+];
+
 class Juego 
 {
     IngresarPalabra(palabra)
@@ -75,6 +86,50 @@ class Juego
         listaLetNoExisten = [...new Set(listaLetNoExisten)];
         return listaLetNoExisten;
     }
+    // Crear Categorias mas una lista de palabras
+    crearCategoria(newCategoria, ...palabras) {
+        let lp = [];
+        for (let i = 0; i < palabras.length; i++) {
+            lp.push(palabras[i]);
+        }
+        baseDatos.push({
+            categoria: newCategoria,
+            palabras: lp,
+        });
+    }
+    palabraAleatoria(categ) {
+        const db = baseDatos
+            .map(({ categoria, palabras }) => ({
+                categoria,
+                palabras,
+            }))
+            .filter((baseDatos) => baseDatos.categoria === categ);
+        // devuelve la categoria mas la lista de palabras
+        // console.log(db);
+        const lp = db[0].palabras;
+        // console.log(lp);
+        let rand = Math.floor(Math.random() * lp.length);
+        let resp = lp[rand];
+        return resp;
+    }
+    verificarPalabraDB(palabra) {
+        const db = baseDatos.map(({ palabras }) => ({
+            palabras,
+        }));
+        console.log(db);
+        let resp = false;
+        for (let i = 0; i < db.length; i++) {
+            if (db[i].palabras.includes(palabra)) {
+                resp = true;
+            }
+        }
+        return resp;
+    }
 }
 
 export default Juego; 
+
+// let db = new Juego();
+// // console.log(baseDatos);
+// db.crearCategoria("plantas","arbol","flor","manzano","pino");
+// console.log(db.palabraAleatoria("verbos"));
