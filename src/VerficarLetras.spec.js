@@ -1,4 +1,5 @@
 import Juego from "./juego.js"
+import listapalabras from "./listaPalabras"
 
 describe("---Letras que estan en la posicion correcta----",() =>{
     const jugar = new Juego();
@@ -48,6 +49,13 @@ describe("---Mostrar letras que no estan en la palabra a adivinar---", () => {
   })
   it("Una palabra sin letras que coincidan, no con letras que esten en la palabra", () => {
     expect(jugar.mostrarLetrasNoExisten("arbol", "casas")).toEqual(["c", "s"]);
+  })
+});
+
+describe("---lista de palabras---", () => {
+  const lista = new listapalabras();
+  it("deberia mostrar palabara de priemera categoria ", () => {
+    expect(lista.primeraCat("limon","fresa","melon","datil", "mango")).toEqual(["limon","fresa","melon","datil", "mango"]);
   })
 });
 
