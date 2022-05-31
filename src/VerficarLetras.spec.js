@@ -54,8 +54,11 @@ describe("---Mostrar letras que no estan en la palabra a adivinar---", () => {
 
 describe("---lista de palabras---", () => {
   const lista = new listapalabras();
-  it("deberia mostrar palabara de priemera categoria ", () => {
+  it("deberia mostrar palabara de primera categoria ", () => {
     expect(lista.primeraCat("limon","fresa","melon","datil", "mango")).toEqual(["limon","fresa","melon","datil", "mango"]);
+  })
+  it("deberia mostrar palabara de segunda categoria ", () => {
+    expect(lista.segunCat("arroz" , "berron" , "avena")).toEqual(["arroz" , "berron" , "avena"]);
   })
 });
 
