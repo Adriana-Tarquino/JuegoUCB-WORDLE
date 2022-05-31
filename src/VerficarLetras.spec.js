@@ -76,7 +76,4 @@ describe("---JUGABILIDAD---", () => {
   it("Se dede mostrar un mensaje que Perdiste en el juego ", () => {
     expect(jugar.TerminarJuego("Perdiste!")).toEqual("Perdiste!");
   })
-  it("Se deberia mostrar una palabra aleatoria", () => {
-    expect(jugar.palabrasAleatoriaCate2()).toEqual();
-  })
 });
