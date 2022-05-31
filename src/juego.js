@@ -4,6 +4,9 @@ class Juego
         this.intentoTotal = 2;
     }
 
+    listaPalabras(){
+        let listaPalabras= ["arbol", "avion", "autos", "casas", "motos", "arcos","buses", "bebes","caldo"];
+    }
     IngresarPalabra(palabra)
     {
         return palabra;
@@ -26,12 +29,12 @@ class Juego
     ValidarJugabilidad(palabra,palabra2)
     {
         let mensaje = "Perdiste!";
-        if(palabra === palabra2)
+        if(this.compararPalabra(palabra,palabra2) == true)
         {
            mensaje = "Ganaste!";
         }
        else{
-           if(this.intentos === 0){
+           if(this.intentos == 0){
                mensaje = "Perdiste!";
            }
            else{
@@ -40,12 +43,17 @@ class Juego
        }
         return mensaje;
     }
-    ValidarIntentos(mensaje)
+    ValidarIntentos()
     {
-        if(mensaje === "Perdiste!"){
-            this.intentoTotal = this.intentoTotal - 1;
-        }
+        this.intentoTotal = this.intentoTotal - 1;
         return this.intentoTotal;
+    }
+    TerminarJuego(mensaje){
+        if(mensaje = "Perdiste!"){
+            return mensaje;
+        }else{
+            return mensaje;
+        }
     }
     comparaLetrasCorrectas(palabra,palabra2)
     {

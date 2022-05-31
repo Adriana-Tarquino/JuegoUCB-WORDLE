@@ -62,4 +62,7 @@ describe("---JUGABILIDAD---", () => {
   it("Comprueba la jugabilidad del juego", () => {
     expect(jugar.ValidarJugabilidad("arbol","casas")).toEqual("Perdiste!");
   })
+  it("Se dede mostrar un mensaje que Perdiste en el juego ", () => {
+    expect(jugar.TerminarJuego("Perdiste!")).toEqual("Perdiste!");
+  })
 });

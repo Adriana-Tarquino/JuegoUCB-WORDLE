@@ -12,7 +12,7 @@ const mongoose = require("mongoose");
 //     .catch(err => console.log("hubo un error: " + err))
 
 // coenxion local
-const url = "mongodb://localhost/ingSoft";
+const url = "mongodb://test/palabras";
 
 mongoose
   .connect(url)
