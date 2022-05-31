@@ -54,10 +54,10 @@ class Juego
             return mensaje;
         }
     }
-    guardarPistas(palabra,palabra2){
-        let correctas = this.comparaLetrasCorrectas(palabra,palabra2);
-        let incorrectas = this.comparaLetrasInCorrectas(palabra,palabra2);
-        let noEstanPalabra = this.mostrarLetrasNoExisten(palabra,palabra2);
+    guardarPistas(correctas,incorrectas,noEstanPalabra){
+       /// correctas = this.comparaLetrasCorrectas(palabra,palabra2);
+        //incorrectas = this.comparaLetrasInCorrectas(palabra,palabra2);
+        //noEstanPalabra = this.mostrarLetrasNoExisten(palabra,palabra2);
         let totalpISTAS = correctas + "/" + incorrectas + "/" + noEstanPalabra;
         return totalpISTAS; 
     }
