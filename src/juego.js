@@ -26,13 +26,20 @@ class Juego
         }
         return resp;
     }
-    palabrasAleatoria(){     
-        var rand = Math.random()*listapalabras.length | 0;
-        const respuesta = listapalabras [rand]
-        //this.palabra = respuesta;
-        return respuesta;
+    palabrasAleatoriaCate1(){     
+        var lista = new listapalabras();
+        var aleatorio = Math.random();
+        var listaCadaena = lista.primeraCat();
+        var palabra = listaCadaena[Math.round(aleatorio)];
+        return palabra;
     }
-
+    palabrasAleatoriaCate2(){     
+        var lista = new listapalabras();
+        var aleatorio = Math.random();
+        var listaCadaena2 = lista.segunCat();
+        var palabra = listaCadaena2[Math.round(aleatorio)];
+        return palabra;
+    }
     ValidarJugabilidad(palabra,palabra2)
     {
         let mensaje = "Perdiste!";

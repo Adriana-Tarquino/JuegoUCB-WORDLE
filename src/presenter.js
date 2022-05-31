@@ -17,11 +17,10 @@ const pistas = "";
 divIntentos.innerHTML = "<h1>" + jugar.intentoTotal +"</h1>";
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    const palabraAdivinar = "arbol";
-    const mensaje = jugar.ValidarJugabilidad(palabraAdivinar,palabra_imput.value);
-    divMensaje.innerHTML = mensaje;
+    const palabraAdivinar = jugar.palabrasAleatoriaCate1();
+    //const mensaje = jugar.ValidarJugabilidad(palabraAdivinar,palabra_imput.value);
+    //divMensaje.innerHTML = mensaje;
     divIntentos.innerHTML = "<h1>" +  jugar.intentoTotal +"</h1>";
-    //div.innerHTML =  "La palabra es " + palabraAdivinar ;
     const palabra2 = palabra_imput.value;
     const correctas =jugar.comparaLetrasCorrectas(palabraAdivinar,palabra2) ;
     const incorrectas = jugar.comparaLetrasInCorrectas(palabraAdivinar,palabra2) ;
@@ -32,9 +31,9 @@ form.addEventListener("submit", (event) => {
    
     if(jugar.intentoTotal == 0){
         alert(jugar.TerminarJuego(jugar.ValidarJugabilidad(palabraAdivinar,palabra_imput.value)));
-       
+        div.innerHTML = "<h1>" + "La palabra es " +  palabraAdivinar + "</h1>";
     }
     else {
-        alert(jugar.ValidarJugabilidad(palabraAdivinar, palabra_imput.value))
+        //alert(jugar.ValidarJugabilidad(palabraAdivinar, palabra_imput.value))
     }
 });

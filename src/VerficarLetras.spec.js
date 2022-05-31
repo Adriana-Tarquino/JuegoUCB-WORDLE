@@ -18,9 +18,6 @@ describe("---Letras que estan en la posicion correcta----",() =>{
     it("Comprobamos si las toda la palabra coinciden y devuelve solo las correctas y si no son correectas devuelve vacio", () => {
         expect(jugar.comparaLetrasCorrectas("autos", "cazar")).toEqual("");
     });
-    it("deberia elegir cualquier palabra", () => {
-      expect(jugar.palabrasAleatoria()).toEqual();
-  });
 });
 
 describe("---Letras que estan en la posicion incorrecta----",() =>{
@@ -79,7 +76,7 @@ describe("---JUGABILIDAD---", () => {
   it("Se dede mostrar un mensaje que Perdiste en el juego ", () => {
     expect(jugar.TerminarJuego("Perdiste!")).toEqual("Perdiste!");
   })
-  /*it("Se deberia mostrar un a lista de palabaras que contenga las pistas anteriores", () => {
-    expect(jugar.guardarPistas("arbol","casas")).toEqual("/aa/c,s");
-  })*/
+  it("Se deberia mostrar una palabra aleatoria", () => {
+    expect(jugar.palabrasAleatoriaCate2()).toEqual();
+  })
 });
