@@ -174,6 +174,17 @@ class Juego {
         }
         return resp;
     }
+    monstrarCategorias(){
+        const db = baseDatos.map(({categoria}) => ({
+            categoria,
+        }));
+        console.log(db);
+        let ctg = [];
+        for (let i = 0; i < db.length; i++){
+            ctg.push(db[i].categoria);
+        }
+        return ctg;
+    }
 }
 
 export default Juego;

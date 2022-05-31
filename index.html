@@ -1,24 +1,28 @@
 <html>
   <body>
     <center>
-    <h1><font face="Comic Sans MS"> ---WORDLE--- </font></h1>
-    <form id="tutorial">
-      <h1><font face="Comic Sans MS"> COMO JUGAR </font></h1>
-     <h1><font face="Comic Sans MS">
-        - Adivina la palabra<br>
-        - La palabra consta de N letras <br>
-        - El juego tiene 3 intentos <br>
-        - Se mostrara una pista para que se acerque a la respuesta <br>
-        - Se mostrara las pistas anteriores al lado de la pista actual <br>
-      </h1>
+      <h1>---WORDLE---</h1>
+      <form id="tutorial">
+        <h1>COMO JUGAR</h1>
+        <h1>
+          - Adivina la palabra<br />
+          - La palabra consta de N letras <br />
+          - El juego tiene 3 intentos <br />
+          - Se mostrara una pista para que se acerque a la respuesta <br />
+          - Se mostrara las pistas anteriores al lado de la pista actual <br />
+        </h1>
+        <select name="ctg" id="seleccionCategoria" class="custom-select">
+          <!-- funcion donde se vera las categorias de forma dinamica -->
+        </select>
+        <br />
+        <br />
         <a href="index2.html">
           <input type="button" value="INICIAR" />
         </a>
-        </font>
-    </form>
-    <div id="resultado-div"></div>
-    <div id="contar"></div>
-    <script type="module" src="./src/presenter.js"></script>
-  </center>
+      </form>
+      <!-- <div id="resultado-div"></div>
+    <div id="contar"></div> -->
+      <script type="module" src="./src/presenter.js"></script>
+    </center>
   </body>
 </html>
