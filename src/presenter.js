@@ -1,22 +1,11 @@
 import Juego from "./juego.js";
-
-const jugar = new Juego();
-// Index1
-const selectCategoria = document.getElementById("seleccionCategoria")
-function mostrarSelect(arreglo, nomSelect){
-    let elementos = '<option selected disabled>ELija una categoria</option>';
-    for (let i = 0; i < arreglo.length; i++){
-        elementos += '<option value="' + arreglo[i] + '">' + arreglo[i] + '</option>';
-    }
-    nomSelect.innerHTML = elementos;
-}
-let arregloCategoria = jugar.monstrarCategorias();
-mostrarSelect(arregloCategoria, selectCategoria);
-
-// Index2
+// Index:
+// const selector = document.getElementById("seleccionCategoria");
+// Index 2;
 const palabra_imput = document.querySelector("#palabra-adivinar");
 const form = document.querySelector("#Adivinar-form");
 const div = document.querySelector("#resultado-div");
+const jugar = new Juego();
 const div2 = document.querySelector("#letras-div");
 const div3 = document.querySelector("#letras-incorrectas-div");
 const div4 = document.querySelector("#letras-no-existen-div");
