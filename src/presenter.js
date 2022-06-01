@@ -1,6 +1,6 @@
 import Juego from "./juego.js";
 // Index:
-// const selector = document.getElementById("seleccionCategoria");
+// const selector = document.getElementById("seleccionCategoria").value;
 // Index 2;
 const palabra_imput = document.querySelector("#palabra-adivinar");
 const form = document.querySelector("#Adivinar-form");
